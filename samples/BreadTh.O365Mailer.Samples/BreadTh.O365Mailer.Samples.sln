@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadTh.O365Mailer.Samples", "BreadTh.O365Mailer.Samples\BreadTh.O365Mailer.Samples.csproj", "{F850B9FD-48A2-4867-86B2-FB373345D8AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreadTh.O365Mailer", "..\..\src\BreadTh.O365Mailer.csproj", "{8AF26DB3-C0B7-48F2-8130-53173B683F2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F850B9FD-48A2-4867-86B2-FB373345D8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F850B9FD-48A2-4867-86B2-FB373345D8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F850B9FD-48A2-4867-86B2-FB373345D8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F850B9FD-48A2-4867-86B2-FB373345D8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF26DB3-C0B7-48F2-8130-53173B683F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF26DB3-C0B7-48F2-8130-53173B683F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF26DB3-C0B7-48F2-8130-53173B683F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF26DB3-C0B7-48F2-8130-53173B683F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD181945-27F5-4ADD-AC06-77F00D42CD10}
+	EndGlobalSection
+EndGlobal
