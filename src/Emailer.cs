@@ -17,28 +17,37 @@ namespace BreadTh.O365
             _networkCredentials = new NetworkCredential(sender, password);
         }
 
-        public void SendMail(string to, string subject, string body)
+        public bool TrySendMail(string to, string subject, string body)
         {
-            MailMessage message = new MailMessage()
-            {   From = new MailAddress(_networkCredentials.UserName)
-            ,   Subject = subject
-            ,   Body = body
-            ,   IsBodyHtml = true
-            };
 
-            message.To.Add(new MailAddress(to));
-
-            using(SmtpClient smtpClient = new SmtpClient()
-            {   UseDefaultCredentials = false
-            ,   Credentials = _networkCredentials
-            ,   Host = "smtp.office365.com"
-            ,   Port = 587
-            ,   DeliveryMethod = SmtpDeliveryMethod.Network
-            ,   EnableSsl = true
-            })
+            try
             {
-                smtpClient.Send(message);
+                MailMessage message = new MailMessage()
+                {   From = new MailAddress(_networkCredentials.UserName)
+                ,   Subject = subject
+                ,   Body = body
+                ,   IsBodyHtml = true
+                };
+
+                message.To.Add(new MailAddress(to));
+
+                using(SmtpClient smtpClient = new SmtpClient()
+                {   UseDefaultCredentials = false
+                ,   Credentials = _networkCredentials
+                ,   Host = "smtp.office365.com"
+                ,   Port = 587
+                ,   DeliveryMethod = SmtpDeliveryMethod.Network
+                ,   EnableSsl = true
+                })
+                    smtpClient.Send(message);
+                
+                return true;
             }
+            catch(Exception e)
+            {
+                return false;    
+            }
+            
         }
 
         public bool IsValidEmailAddress(string emailAddressCandidate)
